@@ -614,7 +614,7 @@
         const rect = card.getBoundingClientRect();
         if (rect.top < window.innerHeight * 0.82) {
           card.classList.add("show");
-        }
+   }
       });
     }
 
@@ -627,7 +627,85 @@
       controlVideoByScroll();
       animateCards();
     });
-  </script>
+    const openSampleModal = document.getElementById("openSampleModal");
+const sampleModal = document.getElementById("sampleModal");
+const closeSampleModal = document.getElementById("closeSampleModal");
+
+if (openSampleModal && sampleModal && closeSampleModal) {
+  openSampleModal.addEventListener("click", () => {
+    sampleModal.classList.add("show");
+    document.body.style.overflow = "hidden";
+  });
+
+  closeSampleModal.addEventListener("click", () => {
+    sampleModal.classList.remove("show");
+    document.body.style.overflow = "";
+  });
+
+  sampleModal.addEventListener("click", (e) => {
+    if (e.target === sampleModal) {
+      sampleModal.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+  });
+}
+
+</script>
+
+<div class="sample-modal" id="sampleModal">
+  <div class="sample-modal-box">
+    <button class="sample-close" id="closeSampleModal">×</button>
+
+    <h2 class="sample-title">ตัวอย่างงานสำหรับโรงแรมและแบรนด์พรีเมียม</h2>
+    <p class="sample-sub">
+      เลือกดูแนวทางการใช้กลิ่นและหน้า Landing Page เพื่อยกระดับภาพลักษณ์ของโรงแรม คลินิก สปา
+      หรือของขวัญ VIP ให้ดูน่าจดจำมากขึ้น
+    </p>
+
+    <div class="sample-grid">
+      <div class="sample-item">
+        <div class="sample-image">HOTEL<br>LOBBY SCENT</div>
+        <div class="sample-content">
+          <span class="sample-tag">Arrival</span>
+          <h3>Lobby Welcome Set</h3>
+          <p>
+            เซ็ตไม้หอมสำหรับพื้นที่ต้อนรับ ช่วยให้แขกรู้สึกถึงความสะอาด ความสงบ
+            และความใส่ใจตั้งแต่ก้าวแรกที่เดินเข้ามา
+          </p>
+        </div>
+      </div>
+
+      <div class="sample-item">
+        <div class="sample-image">SPA<br>RELAXING SCENT</div>
+        <div class="sample-content">
+          <span class="sample-tag">Stay</span>
+          <h3>Spa & Relaxation Mood</h3>
+          <p>
+            เหมาะสำหรับห้องพัก สปา หรือโซนรับรองที่ต้องการบรรยากาศผ่อนคลาย
+            ให้แขกใช้เวลาอย่างสบายใจมากขึ้น
+          </p>
+        </div>
+      </div>
+
+      <div class="sample-item">
+        <div class="sample-image">VIP<br>GIFT SET</div>
+        <div class="sample-content">
+          <span class="sample-tag">Gift</span>
+          <h3>Premium Gift Experience</h3>
+          <p>
+            ใช้เป็นของขวัญลูกค้า VIP หรือของที่ระลึกจากโรงแรม
+            เพื่อให้แขกจดจำประสบการณ์ของแบรนด์ได้แม้กลับไปแล้ว
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sample-footer">
+      <a href="#details" class="sample-btn sample-btn-secondary">ดูแนวคิดเพิ่มเติม</a>
+      <a href="https://www.facebook.com/" target="_blank" class="sample-btn sample-btn-primary">คุยผ่าน Facebook</a>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
