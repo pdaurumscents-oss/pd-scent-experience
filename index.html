@@ -627,28 +627,6 @@
       controlVideoByScroll();
       animateCards();
     });
-    const openSampleModal = document.getElementById("openSampleModal");
-const sampleModal = document.getElementById("sampleModal");
-const closeSampleModal = document.getElementById("closeSampleModal");
-
-if (openSampleModal && sampleModal && closeSampleModal) {
-  openSampleModal.addEventListener("click", () => {
-    sampleModal.classList.add("show");
-    document.body.style.overflow = "hidden";
-  });
-
-  closeSampleModal.addEventListener("click", () => {
-    sampleModal.classList.remove("show");
-    document.body.style.overflow = "";
-  });
-
-  sampleModal.addEventListener("click", (e) => {
-    if (e.target === sampleModal) {
-      sampleModal.classList.remove("show");
-      document.body.style.overflow = "";
-    }
-  });
-}
 
 </script>
 
@@ -706,6 +684,46 @@ if (openSampleModal && sampleModal && closeSampleModal) {
     </div>
   </div>
 </div>
+<script>
 
+const openSampleModal = document.getElementById("openSampleModal");
+
+const sampleModal = document.getElementById("sampleModal");
+
+const closeSampleModal = document.getElementById("closeSampleModal");
+
+if (openSampleModal && sampleModal && closeSampleModal) {
+
+  openSampleModal.addEventListener("click", () => {
+
+    sampleModal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+  });
+
+  closeSampleModal.addEventListener("click", () => {
+
+    sampleModal.classList.remove("show");
+
+    document.body.style.overflow = "";
+
+  });
+
+  sampleModal.addEventListener("click", (e) => {
+
+    if (e.target === sampleModal) {
+
+      sampleModal.classList.remove("show");
+
+      document.body.style.overflow = "";
+
+    }
+
+  });
+
+}
+
+</script>
 </body>
 </html>
